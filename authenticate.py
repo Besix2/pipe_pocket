@@ -1,7 +1,7 @@
 from pocket import Pocket
 
 # Set up Pocket API credentials
-consumer_key = "your-consumer-key"
+consumer_key = input("your consumer key: ")
 redirect_uri = "https://getpocket.com/de/home"
 pocket_instance = Pocket(consumer_key, access_token=None)
 
