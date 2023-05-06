@@ -16,8 +16,8 @@ def handler(pd: "pipedream"):#extract url from pocket.json
     return name
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   def get_tags():#extract tags from pocket api call because pipedreams call doesn't return tags because of detailType not being "complete"
-    consumer_key = "107174-1f8ba59b6102393671ab9f6"
-    access_token = "3efd53d4-7adc-a63e-52de-f86ee5"
+    consumer_key = "your-consumer-key"
+    access_token = "your-access-token"
     pocket_instance = Pocket(consumer_key, access_token=access_token)
     response = pocket_instance.get(detailType="complete")
     new_tuple = response[:1]
@@ -30,13 +30,13 @@ def handler(pd: "pipedream"):#extract url from pocket.json
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   def db_id_set(extracted_url):#set database id depending on type of saved content
     if "insta" in extracted_url:
-      db_id = "102530da-6cc7-44f5-8ac8-e552499940a8"
+      db_id = "your insta database-id"
     elif "reddit" in extracted_url:
-      db_id = "a1b023b304144b528159465200597a58"
+      db_id = "your reddit database-id"
     elif "youtube" in extracted_url:
-      db_id = "77539c3301d24b7594883ad6f6ca1a5e"
+      db_id = "your youtube database-id"
     else:
-      db_id = "18b7ebde729a48d18f8a5212941b7535"
+      db_id = "your article database-id"
     return db_id
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------       
   token = pd.inputs["notion"]["$auth"]["oauth_access_token"]
