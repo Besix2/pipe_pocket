@@ -17,7 +17,7 @@ This application synchronizes pocket items with notion databases. It synchronize
 
 ### 1. Go to [pocket](https://getpocket.com/developer/apps/) and create a new application. Enter the following settings:
        Permissions: retrieve
-       Apllication-Type: Windows-Dekstop
+       Apllication-Type: Windows-Desktop
 ### 2. Copy the token
 ### 3. Git clone the project and install requirements using:
        pip install requirements.txt
