@@ -49,7 +49,10 @@ This application synchronizes pocket items with notion databases. It synchronize
           else:
             db_id = "your article database-id"
         [...]
-### 12.1 For example in this link https://www.notion.so/a1b023b304144b528159465200597a58?v=2974d30753f84a1bad901d34412844 "a1b023b304144b528159465200597a58" is the Id.
+### 12.1 For example in this link:
+         "https://www.notion.so/a1b023b304144b528159465200597a58?v=2974d30753f84a1bad901d34412844"
+         
+         "a1b023b304144b528159465200597a58" is the Id.
 ### 13. Test and deploy your Workflow.
 
 Thats it now your Pocket is connected to notion.
