@@ -12,4 +12,4 @@ print(auth_url)
 input("Finished?(press enter)")
 user_credentials = Pocket.get_credentials(consumer_key=consumer_key, code=request_token)
 access_token = user_credentials['access_token']
-print(f"Your acces token: {access_token}")
+print(f"Your access token: {access_token}")
