@@ -34,7 +34,7 @@ This application synchronizes pocket items with notion databases. It synchronize
         access_token = "your-access-token"
         [...]
 ### 10. Go to notion and click on the 3 dots in the upper right corner than connections und connect to pipedream.
-### 11. The last step before deploying is to create 4 databases one for reddit, one for instagram, one for youtube and one for articles.
+### 11. The last step before deploying is to create four databases one for reddit, one for instagram, one for youtube and one for articles.
 ### 11.1 The Databases need to have 3 properties Title, Url and Tags. In the end they should look like this:
 ![Screenshot 2023-05-06 143434](https://user-images.githubusercontent.com/92743858/236624476-7a3e36b1-ebb8-4455-bfb8-cf3921b72d9e.png)
 ### 12. Copy the databse Id's by clicking on "share link to database". The database id is the first number sequence. Copy these Ids in their fields.
