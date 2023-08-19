@@ -1,0 +1,25 @@
+volume = contract.find("div", class_="product-usp-list-item-title").text
+                    if "magenta" in contract.find("span", class_="product-box-headline").text or "Congstar" in contract.find("span", class_="product-box-headline").text:
+                        continue
+                    element = contract.select_one("span.price-euro:not([data-behavior])")
+                    if element is not None:
+                        euro_monthly = element.get_text(strip=True)
+                    else:
+                        print("Element not found")
+                        
+                    element_cent = contract.select_one("span.price-cent:not([data-behavior])")
+                    if element_cent is not None:
+                        cent_monthly = element_cent.get_text(strip=True)
+                    else:
+                        print("Element not found")
+            
+                    price_monthly = f"{euro_monthly},{cent_monthly}"
+                    euro_onetime = contract.find("span", itemprop="price")
+                    euro_onetime = euro_onetime.text.strip()
+                    euro_onetime = re.sub(r'[^\d,.]', '', euro_onetime).replace(',', '.')
+                    additional_fees = contract.find("div", class_="price-item-additional").text
+                    match = re.findall(r'\d+', additional_fees)
+                    if match:
+                        print(match)
+                    else:
+                        print("Anschlusspreis not found")
