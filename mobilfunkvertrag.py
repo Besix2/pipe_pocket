@@ -249,5 +249,4 @@ def compare():
 
     
 compare()
-# price_check()
         
